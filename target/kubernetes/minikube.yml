@@ -4,9 +4,9 @@ kind: Service
 metadata:
   annotations:
     app.quarkus.io/quarkus-version: 3.26.2
-    app.quarkus.io/commit-id: fa2b09dcab0e64b40b3997a46d3e907fdad0af3b
+    app.quarkus.io/commit-id: 02041a45616330f9af54f61b4bcc4ca34854a98f
     app.quarkus.io/vcs-uri: https://github.com/danieljscosta/cadastroapi-quarkus.git
-    app.quarkus.io/build-timestamp: 2025-09-10 - 12:12:01 +0000
+    app.quarkus.io/build-timestamp: 2025-09-10 - 18:10:06 +0000
   labels:
     app.kubernetes.io/name: cadastroapi-quarkus
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -28,9 +28,9 @@ kind: Deployment
 metadata:
   annotations:
     app.quarkus.io/quarkus-version: 3.26.2
-    app.quarkus.io/commit-id: fa2b09dcab0e64b40b3997a46d3e907fdad0af3b
+    app.quarkus.io/commit-id: 02041a45616330f9af54f61b4bcc4ca34854a98f
     app.quarkus.io/vcs-uri: https://github.com/danieljscosta/cadastroapi-quarkus.git
-    app.quarkus.io/build-timestamp: 2025-09-10 - 12:12:01 +0000
+    app.quarkus.io/build-timestamp: 2025-09-10 - 18:10:06 +0000
   labels:
     app.kubernetes.io/name: cadastroapi-quarkus
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -45,9 +45,9 @@ spec:
     metadata:
       annotations:
         app.quarkus.io/quarkus-version: 3.26.2
-        app.quarkus.io/commit-id: fa2b09dcab0e64b40b3997a46d3e907fdad0af3b
+        app.quarkus.io/commit-id: 02041a45616330f9af54f61b4bcc4ca34854a98f
         app.quarkus.io/vcs-uri: https://github.com/danieljscosta/cadastroapi-quarkus.git
-        app.quarkus.io/build-timestamp: 2025-09-10 - 12:12:01 +0000
+        app.quarkus.io/build-timestamp: 2025-09-10 - 18:10:06 +0000
       labels:
         app.kubernetes.io/name: cadastroapi-quarkus
         app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -58,7 +58,7 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-          image: docker.io/daniel/cadastroapi-quarkus:1.0.0-SNAPSHOT
+          image: docker.io/danieljscosta/cadastroapi-quarkus:1.0.0-SNAPSHOT
           imagePullPolicy: IfNotPresent
           name: cadastroapi-quarkus
           ports:
