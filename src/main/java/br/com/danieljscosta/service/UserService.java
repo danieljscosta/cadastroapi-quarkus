@@ -1,5 +1,6 @@
 package br.com.danieljscosta.service;
 
+import br.com.danieljscosta.dto.UsersDTO;
 import br.com.danieljscosta.entity.Users;
 import br.com.danieljscosta.exceptions.UserNotFoundException;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -14,7 +15,10 @@ import java.util.UUID;
 @ApplicationScoped
 @Transactional
 public class UserService {
-    public Users createUserX(Users users){
+    public Users createUserX(UsersDTO usersDTO){
+        Users users = new Users();
+        users.username = usersDTO.username;
+        users.email = usersDTO.email;
         Users.persist(users);
         return users;
     }
@@ -32,10 +36,11 @@ public class UserService {
         //Por isso preciso do casting pq o metodo espera um Users como retorno
     }
 
-    public Users updateUser(UUID userId, Users user){
-        var userToUpdate = findById(userId);
-        userToUpdate.username = user.username;
-        userToUpdate.email = user.email;
+    public Users updateUser(UUID userId, UsersDTO userDTO){
+        Users userToUpdate = new Users();
+        userToUpdate = findById(userId);
+        userToUpdate.username = userDTO.username;
+        userToUpdate.email = userDTO.email;
         userToUpdate.persist();
         //Users.persist(userToUpdate); //Outra forma de persistir
         return userToUpdate;

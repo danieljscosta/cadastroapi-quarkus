@@ -1,0 +1,6 @@
+br/com/danieljscosta/controller/UserController.class
+br/com/danieljscosta/dto/UsersDTO.class
+br/com/danieljscosta/exceptions/UserResponseExceptionMapper.class
+br/com/danieljscosta/exceptions/UserNotFoundException.class
+br/com/danieljscosta/entity/Users.class
+br/com/danieljscosta/service/UserService.class

@@ -1,5 +1,6 @@
 package br.com.danieljscosta.controller;
 
+import br.com.danieljscosta.dto.UsersDTO;
 import br.com.danieljscosta.entity.Users;
 import br.com.danieljscosta.service.UserService;
 import jakarta.transaction.Transactional;
@@ -36,14 +37,14 @@ public class UserController {
 
     @POST
     @Path("/create")
-    public Response createUser(Users user){
+    public Response createUser(UsersDTO user){
         return Response.ok(userService.createUserX(user)).build();
     }
 
     @PUT
     @Transactional
     @Path("/update/{id}")
-    public Response updateUser(@PathParam("id") UUID userId, Users user){
+    public Response updateUser(@PathParam("id") UUID userId, UsersDTO user){
         return Response.ok(userService.updateUser(userId, user)).build();
     }
 
